@@ -1,8 +1,11 @@
 package br.com.estabulo;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Seja bem vindo ao estábulo");
-        System.out.println("Nova mensagem aqui!");
+        SpringApplication.run(Main.class, args);
     }
 }
