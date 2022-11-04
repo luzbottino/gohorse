@@ -35,4 +35,9 @@ import java.util.stream.Collectors;
         public String cadastrar(@RequestBody AlunoDTO aluno){
             return "O " + aluno + " foi cadastrado";
         }
+
+        @DeleteMapping("/{matricula}")
+        public String deletar(@RequestParam("matricula") String matricula){
+            return "O aluno de matrícula: " + matricula + " foi deletado";
+        }
     }
