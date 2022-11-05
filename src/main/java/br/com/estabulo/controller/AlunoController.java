@@ -37,7 +37,7 @@ import java.util.stream.Collectors;
         }
 
         @DeleteMapping("/{matricula}")
-        public String deletar(@RequestParam("matricula") String matricula){
+        public String deletar(@PathVariable("matricula") String matricula){
             return "O aluno de matrícula: " + matricula + " foi deletado";
         }
     }
