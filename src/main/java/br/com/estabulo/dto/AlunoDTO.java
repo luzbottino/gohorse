@@ -1,5 +1,7 @@
 package br.com.estabulo.dto;
 
+import br.com.estabulo.domain.Aluno;
+
 public class AlunoDTO {
 
     private String nome;
@@ -12,6 +14,17 @@ public class AlunoDTO {
         this.matricula = matricula;
         this.creditos = creditos;
         this.curso = curso;
+    }
+
+    public AlunoDTO(Aluno aluno) {
+        this.nome = aluno.getNome();
+        this.matricula = aluno.getMatricula();
+        this.creditos = aluno.getCreditos();
+        this.curso = aluno.getCurso();
+    }
+
+    public static AlunoDTO toEntity(Aluno aluno) {
+        return new AlunoDTO(aluno);
     }
 
     public String getNome() {
